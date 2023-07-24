@@ -31,7 +31,7 @@ public class loginTeste {
 	@AfterEach
 	public void afterEach() {
 		// TODO Auto-generated method stub
-		this.browser.quit();
+		//this.browser.quit();
 	}
 	
 	@Test
@@ -61,4 +61,11 @@ public class loginTeste {
 		
 	}
 
+	
+	@Test
+	public void naoDeveriaAcessarPaginaRestritaSemEstarLogado() {
+	    this.browser.navigate().to("http://localhost:8080/leiloes/2");
+	    Assert.assertTrue(browser.getCurrentUrl().equals("http://localhost:8080/login"));
+	    Assert.assertFalse(browser.getPageSource().contains("Dados do Leilão"));
+	}
 }
