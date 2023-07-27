@@ -1,20 +1,19 @@
 package br.com.alura.leilao.lances;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LancesPage {
+import br.com.alura.leilao.PageObject;
+
+public class LancesPage extends PageObject{
 
 	private static final String URL_LANCES = "http://localhost:8080/leilao/2";
+	
 
-	private WebDriver browser;
-
-	public LancesPage() {
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-		this.browser = new ChromeDriver();
+	public LancesPage(WebDriver browser) {
+		super(null);
 		this.browser.navigate().to(URL_LANCES);
 	}
-
+	
 	public boolean isPaginaAtual() {
 		return browser.getCurrentUrl().contains(URL_LANCES);
 	}

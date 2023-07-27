@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HelloWorldSelenium {
 	
 	@Test
-	public void hello() {
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+	public void helloTest() {
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		WebDriver browser = new ChromeDriver();
 		browser.navigate().to("http://localhost:8080/leiloes");
 		browser.quit();
