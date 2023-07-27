@@ -8,12 +8,12 @@ public class LancesPage extends PageObject{
 
 	private static final String URL_LANCES = "http://localhost:8080/leilao/2";
 	
-
-	public LancesPage(WebDriver browser) {
-		super(null);
-		this.browser.navigate().to(URL_LANCES);
-	}
 	
+	public LancesPage() {
+		// TODO Auto-generated constructor stub
+		super(null);
+	}
+
 	public boolean isPaginaAtual() {
 		return browser.getCurrentUrl().contains(URL_LANCES);
 	}

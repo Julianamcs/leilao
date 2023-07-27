@@ -42,7 +42,7 @@ public class LoginTest {
 
 	@Test
 	public void naoDeveriaAcessarUrlRestritaSemEstarLogado() {
-		LancesPage paginaDeLances = new LancesPage(null);
+		LancesPage paginaDeLances = new LancesPage();
 
 		Assert.assertFalse(paginaDeLances.isPaginaAtual());
 		Assert.assertFalse(paginaDeLances.isTituloLeilaoVisivel());
