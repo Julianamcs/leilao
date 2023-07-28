@@ -1,12 +1,11 @@
 package br.com.alura.leilao.login;
 
-
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import br.com.alura.leilao.lances.LancesPage;
+import br.com.alura.leilao.lance.LancesPage;
 
 public class LoginTest {
 
@@ -17,10 +16,10 @@ public class LoginTest {
 		this.paginaDeLogin = new LoginPage();
 	}
 
-	@AfterEach
+	/**@AfterEach
 	public void afterEach() {
 		this.paginaDeLogin.fechar();
-	}
+	}*/
 
 	@Test
 	public void deveriaEfetuarLoginComDadosValidos() {
@@ -47,8 +46,7 @@ public class LoginTest {
 		Assert.assertFalse(paginaDeLances.isPaginaAtual());
 		Assert.assertFalse(paginaDeLances.isTituloLeilaoVisivel());
 
-		paginaDeLances.fechar();
+		//paginaDeLances.fechar();
 	}
 
 }
-

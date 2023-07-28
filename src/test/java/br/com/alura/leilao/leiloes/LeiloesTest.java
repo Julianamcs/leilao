@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,11 +21,11 @@ public class LeiloesTest {
 		this.paginaDeCadastroDeLeilao = paginaDeLeiloes.carregarFormulario();
 	}
 
-	@AfterEach
+	/**@AfterEach
 	public void afterEach() {
 		this.paginaDeLeiloes.fechar();
 		this.paginaDeCadastroDeLeilao.fechar();
-	}
+	}*/
 
 	@Test
 	public void deveriaCadastrarLeilao() {

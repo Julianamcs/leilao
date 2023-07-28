@@ -30,4 +30,5 @@ public class CadastroLeilaoPage extends PageObject {
 	public boolean isPaginaAtual() {
 		return this.browser.getCurrentUrl().equals(URL_FORM);
 	}
+
 }
